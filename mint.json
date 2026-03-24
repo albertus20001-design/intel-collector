@@ -13,15 +13,11 @@
   "navigation": [
     {
       "group": "Overview",
-      "pages": ["index"]
+      "pages": ["index", "change-log"]
     },
     {
-      "group": "Collection",
-      "pages": ["collection/sources", "collection/schedule", "collection/output"]
-    },
-    {
-      "group": "Ops",
-      "pages": ["ops/runbook", "ops/changelog"]
+      "group": "Vendors",
+      "pages": ["vendors/anthropic", "vendors/openai", "vendors/google", "vendors/deepseek", "vendors/openrouter"]
     }
   ]
 }
