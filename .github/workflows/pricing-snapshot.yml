@@ -25,11 +25,11 @@ jobs:
 
       - name: Commit changes
         run: |
-          if [ -n "$(git status --porcelain data/claude/pricing-snapshot.md data/openai/pricing-snapshot.md)" ]; then
+          if [ -n "$(git status --porcelain data/claude data/openai)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add data/claude/pricing-snapshot.md data/openai/pricing-snapshot.md
-            git commit -m "chore: update pricing snapshot"
+            git add data/claude data/openai
+            git commit -m "chore: update model intel docs"
             git push
           else
             echo "No changes"

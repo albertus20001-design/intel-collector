@@ -4,13 +4,27 @@ import { dirname } from 'node:path';
 
 const sources = [
   {
-    name: 'claude',
+    vendor: 'claude',
+    name: 'pricing',
     url: 'https://platform.claude.com/docs/en/about-claude/pricing.md',
     rejectPatterns: ['App unavailable in region'],
   },
   {
-    name: 'openai',
+    vendor: 'claude',
+    name: 'api',
+    url: 'https://docs.claude.com/en/api/messages',
+    rejectPatterns: [],
+  },
+  {
+    vendor: 'openai',
+    name: 'pricing',
     url: 'https://developers.openai.com/api/docs/pricing.md',
+    rejectPatterns: [],
+  },
+  {
+    vendor: 'openai',
+    name: 'api',
+    url: 'https://platform.openai.com/docs/api-reference/introduction',
     rejectPatterns: [],
   },
 ];
@@ -30,7 +44,7 @@ function isBadContent(body, patterns) {
 const stamp = new Date().toISOString();
 for (const src of sources) {
   const result = fetchUrl(src.url);
-  const file = `data/${src.name}/pricing-snapshot.md`;
+  const file = `data/${src.vendor}/${src.name}.md`;
   mkdirSync(dirname(file), { recursive: true });
 
   if ((!result.ok || isBadContent(result.body, src.rejectPatterns)) && existsSync(file)) {
@@ -38,7 +52,7 @@ for (const src of sources) {
     continue;
   }
 
-  const out = `# ${src.name} pricing snapshot\n\nGenerated at: ${stamp}\n\nSource: ${src.url}\n\n${result.body.trimEnd()}\n`;
+  const out = `# ${src.vendor} ${src.name}\n\nGenerated at: ${stamp}\n\nSource: ${src.url}\n\n${result.body.trimEnd()}\n`;
   writeFileSync(file, out);
   console.log(`updated ${file}`);
 }
