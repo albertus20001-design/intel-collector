@@ -1,4 +1,4 @@
-const base = 'https://github.com/albertus20001-design/intel-collector/blob/main/';
+const base = 'https://github.com/albertus20001-design/llm-collector/blob/main/';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 

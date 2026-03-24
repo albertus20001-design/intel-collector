@@ -20,7 +20,7 @@ function parseSourcesYaml(yml) {
 }
 
 const vendors = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8'));
-let md = `# Intel Collector\n\nGenerated from \`sources/index.yml\`.\n\n`;
+let md = `# Llm Collector\n\nGenerated from \`sources/index.yml\`.\n\n`;
 for (const [vendor, info] of Object.entries(vendors)) {
   md += `## ${vendor} (${info.group || 'ungrouped'})\n\n`;
   for (const src of info.sources) {
