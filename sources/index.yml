@@ -103,35 +103,35 @@ vendors:
     group: flagship
     sources:
       - name: pricing
-        url: https://ai.google.dev/gemini-api/docs/pricing
+        url: https://ai.google.dev/gemini-api/docs/pricing.md
         enabled: true
         priority: 1
         tags: [pricing]
         fetchMode: markdown
         outputPath: data/google/pricing.md
       - name: api-overview
-        url: https://ai.google.dev/gemini-api/docs
+        url: https://ai.google.dev/gemini-api/docs.md
         enabled: true
         priority: 2
         tags: [api]
         fetchMode: markdown
         outputPath: data/google/api-overview.md
       - name: api-models
-        url: https://ai.google.dev/gemini-api/docs/models
+        url: https://ai.google.dev/gemini-api/docs/models.md
         enabled: true
         priority: 2
         tags: [api, models]
         fetchMode: markdown
         outputPath: data/google/api-models.md
       - name: api-structured-output
-        url: https://ai.google.dev/gemini-api/docs/structured-output
+        url: https://ai.google.dev/gemini-api/docs/structured-output.md
         enabled: true
         priority: 2
         tags: [api, format]
         fetchMode: markdown
         outputPath: data/google/api-structured-output.md
       - name: api-errors
-        url: https://ai.google.dev/gemini-api/docs/troubleshooting
+        url: https://ai.google.dev/gemini-api/docs/troubleshooting.md
         enabled: true
         priority: 3
         tags: [api, errors]
@@ -141,21 +141,21 @@ vendors:
     group: challenger
     sources:
       - name: pricing
-        url: https://api-docs.deepseek.com/quick_start/pricing
+        url: https://api-docs.deepseek.com/quick_start/pricing.md
         enabled: true
         priority: 1
         tags: [pricing]
         fetchMode: markdown
         outputPath: data/deepseek/pricing.md
       - name: api-introduction
-        url: https://api-docs.deepseek.com/
+        url: https://api-docs.deepseek.com/index.md
         enabled: true
         priority: 2
         tags: [api]
         fetchMode: markdown
         outputPath: data/deepseek/api-introduction.md
       - name: api-chat
-        url: https://api-docs.deepseek.com/api/create-chat-completion
+        url: https://api-docs.deepseek.com/api/create-chat-completion.md
         enabled: true
         priority: 2
         tags: [api]
@@ -179,21 +179,21 @@ vendors:
         fetchMode: markdown
         outputPath: data/openrouter/pricing.md
       - name: api-introduction
-        url: https://openrouter.ai/docs/quickstart
+        url: https://openrouter.ai/docs/quickstart.md
         enabled: true
         priority: 2
         tags: [api]
         fetchMode: markdown
         outputPath: data/openrouter/api-introduction.md
       - name: api-models
-        url: https://openrouter.ai/models
+        url: https://openrouter.ai/models.md
         enabled: true
         priority: 2
         tags: [api, models]
         fetchMode: markdown
         outputPath: data/openrouter/api-models.md
       - name: api-errors
-        url: https://openrouter.ai/docs/api-reference/errors
+        url: https://openrouter.ai/docs/api-reference/errors.md
         enabled: true
         priority: 3
         tags: [api, errors]
