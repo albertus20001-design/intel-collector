@@ -6,6 +6,15 @@ import TurndownService from 'turndown';
 const DEFAULT_TIMEOUT = '20';
 const turndown = new TurndownService({ headingStyle: 'atx', codeBlockStyle: 'fenced' });
 
+function probeUrl(url, timeoutSeconds = DEFAULT_TIMEOUT) {
+  try {
+    const out = execFileSync('curl', ['-L', '--silent', '--show-error', '--max-time', String(timeoutSeconds), '-o', '/dev/null', '-w', '%{url_effective}', url], { encoding: 'utf8', maxBuffer: 1024 * 1024 });
+    return out.trim();
+  } catch {
+    return url;
+  }
+}
+
 function fetchUrl(url, timeoutSeconds = DEFAULT_TIMEOUT) {
   try {
     const body = execFileSync('curl', ['-L', '--fail', '--silent', '--show-error', '--max-time', String(timeoutSeconds), url], { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
@@ -56,7 +65,17 @@ function parseSourcesYaml(yml) {
   return items.filter(x => x.vendor && x.name && x.url && x.enabled !== false).sort((a,b)=>(a.priority??99)-(b.priority??99));
 }
 
-const sources = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8'));
+function preferMarkdownUrl(url) {
+  if (url.endsWith('.md')) return url;
+  const md = `${url}.md`;
+  const effective = probeUrl(md);
+  if (effective.endsWith('.md')) return effective;
+  const effectiveBase = probeUrl(url);
+  if (effectiveBase.endsWith('.md')) return effectiveBase;
+  return effectiveBase;
+}
+
+const sources = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8')).map(src => ({ ...src, url: preferMarkdownUrl(src.url) }));
 const stamp = new Date().toISOString();
 for (const src of sources) {
   const result = fetchUrl(src.url, src.timeoutSeconds);
