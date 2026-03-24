@@ -24,19 +24,26 @@ function parseSourcesYaml(yml) {
     let m = line.match(/^\s{2}([a-z0-9_-]+):\s*$/i);
     if (m) { vendor = m[1]; continue; }
     m = line.match(/^\s{4}-\s+name:\s*(\S+)\s*$/);
-    if (m) { current = { vendor, name: m[1], rejectPatterns: [] }; items.push(current); continue; }
+    if (m) { current = { vendor, name: m[1], enabled: true, priority: 99, tags: [], rejectPatterns: [] }; items.push(current); continue; }
     m = line.match(/^\s{6}url:\s*(\S+)\s*$/);
     if (m && current) { current.url = m[1]; continue; }
+    m = line.match(/^\s{6}enabled:\s*(true|false)\s*$/);
+    if (m && current) { current.enabled = m[1] === 'true'; continue; }
+    m = line.match(/^\s{6}priority:\s*(\d+)\s*$/);
+    if (m && current) { current.priority = Number(m[1]); continue; }
+    m = line.match(/^\s{6}tags:\s*\[(.*)\]\s*$/);
+    if (m && current) { current.tags = m[1].split(',').map(s => s.trim()).filter(Boolean); continue; }
+    m = line.match(/^\s{6}notes:\s*(.+)$/);
+    if (m && current) { current.notes = m[1]; continue; }
     m = line.match(/^\s{6}rejectPatterns:\s*$/);
     if (m && current) { current.rejectPatterns = []; continue; }
     m = line.match(/^\s{8}-\s*(.+)\s*$/);
     if (m && current) { current.rejectPatterns.push(m[1]); continue; }
   }
-  return items.filter(x => x.vendor && x.name && x.url);
+  return items.filter(x => x.vendor && x.name && x.url && x.enabled !== false).sort((a,b)=>(a.priority??99)-(b.priority??99));
 }
 
-const sourcesPath = 'sources/index.yml';
-const sources = parseSourcesYaml(readFileSync(sourcesPath, 'utf8'));
+const sources = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8'));
 const stamp = new Date().toISOString();
 for (const src of sources) {
   const result = fetchUrl(src.url);
@@ -46,7 +53,12 @@ for (const src of sources) {
     console.log(`skipped ${file} (fetch failed or rejected, keeping existing snapshot)`);
     continue;
   }
-  const out = `# ${src.vendor} ${src.name}\n\nGenerated at: ${stamp}\n\nSource: ${src.url}\n\n${result.body.trimEnd()}\n`;
+  const meta = [
+    `Source: ${src.url}`,
+    src.tags?.length ? `Tags: ${src.tags.join(', ')}` : null,
+    src.notes ? `Notes: ${src.notes}` : null,
+  ].filter(Boolean).join('\n');
+  const out = `# ${src.vendor} ${src.name}\n\nGenerated at: ${stamp}\n\n${meta}\n\n${result.body.trimEnd()}\n`;
   writeFileSync(file, out);
   console.log(`updated ${file}`);
 }

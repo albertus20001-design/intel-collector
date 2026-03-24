@@ -2,63 +2,148 @@ vendors:
   anthropic:
     - name: pricing
       url: https://platform.claude.com/docs/en/about-claude/pricing.md
+      enabled: true
+      priority: 1
+      tags: [pricing]
+      notes: App unavailable in region if blocked
       rejectPatterns:
         - App unavailable in region
     - name: api-messages
       url: https://docs.claude.com/en/api/messages
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-completions
       url: https://docs.claude.com/en/api/completions
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-models
       url: https://docs.claude.com/en/docs/about-claude/models
+      enabled: true
+      priority: 2
+      tags: [api, models]
     - name: api-error-codes
       url: https://docs.claude.com/en/api/errors
+      enabled: true
+      priority: 3
+      tags: [api, errors]
     - name: api-rate-limits
       url: https://docs.claude.com/en/api/rate-limits
+      enabled: true
+      priority: 3
+      tags: [api, limits]
   openai:
     - name: pricing
       url: https://developers.openai.com/api/docs/pricing.md
+      enabled: true
+      priority: 1
+      tags: [pricing]
     - name: api-introduction
       url: https://platform.openai.com/docs/api-reference/introduction
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-chat
       url: https://platform.openai.com/docs/api-reference/chat
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-responses
       url: https://platform.openai.com/docs/api-reference/responses
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-models
       url: https://platform.openai.com/docs/models
+      enabled: true
+      priority: 2
+      tags: [api, models]
     - name: api-errors
       url: https://platform.openai.com/docs/guides/error-codes
+      enabled: true
+      priority: 3
+      tags: [api, errors]
     - name: api-rate-limits
       url: https://platform.openai.com/docs/guides/rate-limits
+      enabled: true
+      priority: 3
+      tags: [api, limits]
   google:
     - name: pricing
       url: https://ai.google.dev/gemini-api/docs/pricing
+      enabled: true
+      priority: 1
+      tags: [pricing]
     - name: api-overview
       url: https://ai.google.dev/gemini-api/docs
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-models
       url: https://ai.google.dev/gemini-api/docs/models
+      enabled: true
+      priority: 2
+      tags: [api, models]
     - name: api-structured-output
       url: https://ai.google.dev/gemini-api/docs/structured-output
+      enabled: true
+      priority: 2
+      tags: [api, format]
     - name: api-errors
       url: https://ai.google.dev/gemini-api/docs/troubleshooting
+      enabled: true
+      priority: 3
+      tags: [api, errors]
   deepseek:
     - name: pricing
       url: https://api-docs.deepseek.com/quick_start/pricing
+      enabled: true
+      priority: 1
+      tags: [pricing]
     - name: api-introduction
       url: https://api-docs.deepseek.com/
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-chat
       url: https://api-docs.deepseek.com/api/create-chat-completion
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-models
       url: https://api-docs.deepseek.com/models
+      enabled: true
+      priority: 2
+      tags: [api, models]
     - name: api-errors
       url: https://api-docs.deepseek.com/guide/error_code
+      enabled: true
+      priority: 3
+      tags: [api, errors]
   openrouter:
     - name: pricing
       url: https://openrouter.ai/docs/pricing
+      enabled: true
+      priority: 1
+      tags: [pricing]
     - name: api-introduction
       url: https://openrouter.ai/docs/quickstart
+      enabled: true
+      priority: 2
+      tags: [api]
     - name: api-models
       url: https://openrouter.ai/models
+      enabled: true
+      priority: 2
+      tags: [api, models]
     - name: api-rate-limits
       url: https://openrouter.ai/docs/requests-and-rate-limits
+      enabled: true
+      priority: 3
+      tags: [api, limits]
     - name: api-errors
       url: https://openrouter.ai/docs/errors
+      enabled: true
+      priority: 3
+      tags: [api, errors]
