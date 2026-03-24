@@ -35,12 +35,15 @@ function cleanHtml(html) {
   s = s.replace(/<!--([\s\S]*?)-->/g, '\n');
   s = s.replace(/<(h[1-6])[^>]*>/gi, '\n# ');
   s = s.replace(/<\/h[1-6]>/gi, '\n\n');
-  s = s.replace(/<(p|div|section|article|main|header|footer|nav|aside|li|tr|td|th|ul|ol|table|thead|tbody|tfoot|blockquote|pre|code|br)[^>]*>/gi, '\n');
+  s = s.replace(/<(p|div|section|article|main|header|footer|nav|aside|li|tr|td|th|ul|ol|table|thead|tbody|tfoot|blockquote|pre|code|br|span|button|details|summary)[^>]*>/gi, '\n');
   s = s.replace(/<[^>]+>/g, '');
   s = decodeEntities(s);
   s = s.replace(/^!.*$/gm, '');
   s = s.replace(/^\s*\!\[.*$/gm, '');
   s = s.replace(/\{[^\n]*\}/g, '');
+  s = s.replace(/requestAnimationFrame\([^\n]*\)/g, '');
+  s = s.replace(/window\.[A-Za-z0-9_]+[^\n]*/g, '');
+  s = s.replace(/document\.[A-Za-z0-9_]+[^\n]*/g, '');
   s = s.replace(/[ \t]+\n/g, '\n');
   s = s.replace(/\n{3,}/g, '\n\n');
   return s.trim();
