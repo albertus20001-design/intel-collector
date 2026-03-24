@@ -2,12 +2,14 @@ import { execFileSync } from 'node:child_process';
 import { mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 
-function fetchUrl(url, mode = 'markdown') {
+const CURL_TIMEOUT = '20';
+
+function fetchUrl(url) {
   try {
-    const body = execFileSync('curl', ['-L', '--fail', '--silent', '--show-error', url], { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
-    return { ok: true, body, mode };
+    const body = execFileSync('curl', ['-L', '--fail', '--silent', '--show-error', '--max-time', CURL_TIMEOUT, url], { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
+    return { ok: true, body };
   } catch (e) {
-    return { ok: false, body: `ERROR_FETCHING_URL\n${String(e.stderr || e.message || e)}`, mode };
+    return { ok: false, body: `ERROR_FETCHING_URL\n${String(e.stderr || e.message || e)}` };
   }
 }
 
@@ -46,7 +48,7 @@ function parseSourcesYaml(yml) {
 const sources = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8'));
 const stamp = new Date().toISOString();
 for (const src of sources) {
-  const result = fetchUrl(src.url, src.fetchMode);
+  const result = fetchUrl(src.url);
   const file = src.outputPath || `data/${src.vendor}/${src.name}.md`;
   mkdirSync(dirname(file), { recursive: true });
   if ((!result.ok || isBadContent(result.body, src.rejectPatterns)) && existsSync(file)) {
