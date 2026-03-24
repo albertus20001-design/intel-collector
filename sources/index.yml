@@ -3,8 +3,7 @@ vendors:
     group: flagship
     sources:
       - name: pricing
-        url: https://platform.claude.com/docs/en/about-claude/pricing
-        preferMarkdown: true
+        url: https://platform.claude.com/docs/en/about-claude/pricing.md
         enabled: true
         priority: 1
         tags: [pricing]
@@ -15,8 +14,7 @@ vendors:
         rejectPatterns:
           - App unavailable in region
       - name: api-messages
-        url: https://platform.claude.com/docs/en/api/messages
-        preferMarkdown: true
+        url: https://platform.claude.com/docs/en/api/messages.md
         enabled: true
         priority: 2
         tags: [api]
@@ -24,8 +22,7 @@ vendors:
         outputPath: data/anthropic/api-messages.md
         timeoutSeconds: 20
       - name: api-completions
-        url: https://platform.claude.com/docs/en/api/completions
-        preferMarkdown: true
+        url: https://platform.claude.com/docs/en/api/completions.md
         enabled: true
         priority: 2
         tags: [api]
@@ -33,8 +30,7 @@ vendors:
         outputPath: data/anthropic/api-completions.md
         timeoutSeconds: 20
       - name: api-models
-        url: https://platform.claude.com/docs/en/about-claude/models
-        preferMarkdown: true
+        url: https://platform.claude.com/docs/en/about-claude/models.md
         enabled: true
         priority: 2
         tags: [api, models]
@@ -42,8 +38,7 @@ vendors:
         outputPath: data/anthropic/api-models.md
         timeoutSeconds: 20
       - name: api-error-codes
-        url: https://platform.claude.com/docs/en/api/errors
-        preferMarkdown: true
+        url: https://platform.claude.com/docs/en/api/errors.md
         enabled: true
         priority: 3
         tags: [api, errors]
@@ -51,8 +46,7 @@ vendors:
         outputPath: data/anthropic/api-error-codes.md
         timeoutSeconds: 20
       - name: api-rate-limits
-        url: https://platform.claude.com/docs/en/api/rate-limits
-        preferMarkdown: true
+        url: https://platform.claude.com/docs/en/api/rate-limits.md
         enabled: true
         priority: 3
         tags: [api, limits]
@@ -63,8 +57,7 @@ vendors:
     group: flagship
     sources:
       - name: pricing
-        url: https://developers.openai.com/api/docs/pricing
-        preferMarkdown: true
+        url: https://developers.openai.com/api/docs/pricing.md
         enabled: true
         priority: 1
         tags: [pricing]
@@ -73,7 +66,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-introduction
         url: https://platform.openai.com/docs/api-reference/introduction
-        preferMarkdown: true
         enabled: true
         priority: 2
         tags: [api]
@@ -82,7 +74,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-chat
         url: https://platform.openai.com/docs/api-reference/chat
-        preferMarkdown: true
         enabled: true
         priority: 2
         tags: [api]
@@ -91,7 +82,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-responses
         url: https://platform.openai.com/docs/api-reference/responses
-        preferMarkdown: true
         enabled: true
         priority: 2
         tags: [api]
@@ -100,7 +90,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-models
         url: https://platform.openai.com/docs/models
-        preferMarkdown: true
         enabled: true
         priority: 2
         tags: [api, models]
@@ -109,7 +98,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-errors
         url: https://platform.openai.com/docs/guides/error-codes
-        preferMarkdown: true
         enabled: true
         priority: 3
         tags: [api, errors]
@@ -118,7 +106,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-rate-limits
         url: https://platform.openai.com/docs/guides/rate-limits
-        preferMarkdown: true
         enabled: true
         priority: 3
         tags: [api, limits]
@@ -129,8 +116,7 @@ vendors:
     group: flagship
     sources:
       - name: pricing
-        url: https://ai.google.dev/gemini-api/docs/pricing
-        preferMarkdown: false
+        url: https://ai.google.dev/gemini-api/docs/pricing.md.txt
         enabled: true
         priority: 1
         tags: [pricing]
@@ -138,8 +124,7 @@ vendors:
         outputPath: data/google/pricing.md
         timeoutSeconds: 20
       - name: api-overview
-        url: https://ai.google.dev/gemini-api/docs
-        preferMarkdown: false
+        url: https://ai.google.dev/gemini-api/docs.md.txt
         enabled: true
         priority: 2
         tags: [api]
@@ -147,8 +132,7 @@ vendors:
         outputPath: data/google/api-overview.md
         timeoutSeconds: 20
       - name: api-models
-        url: https://ai.google.dev/gemini-api/docs/models
-        preferMarkdown: false
+        url: https://ai.google.dev/gemini-api/docs/models.md.txt
         enabled: true
         priority: 2
         tags: [api, models]
@@ -156,8 +140,7 @@ vendors:
         outputPath: data/google/api-models.md
         timeoutSeconds: 20
       - name: api-structured-output
-        url: https://ai.google.dev/gemini-api/docs/structured-output
-        preferMarkdown: false
+        url: https://ai.google.dev/gemini-api/docs/structured-output.md.txt
         enabled: true
         priority: 2
         tags: [api, format]
@@ -165,8 +148,7 @@ vendors:
         outputPath: data/google/api-structured-output.md
         timeoutSeconds: 20
       - name: api-errors
-        url: https://ai.google.dev/gemini-api/docs/troubleshooting
-        preferMarkdown: false
+        url: https://ai.google.dev/gemini-api/docs/troubleshooting.md.txt
         enabled: true
         priority: 3
         tags: [api, errors]
@@ -177,8 +159,7 @@ vendors:
     group: challenger
     sources:
       - name: pricing
-        url: https://api-docs.deepseek.com/quick_start/pricing
-        preferMarkdown: true
+        url: https://api-docs.deepseek.com/quick_start/pricing.md
         enabled: true
         priority: 1
         tags: [pricing]
@@ -186,8 +167,7 @@ vendors:
         outputPath: data/deepseek/pricing.md
         timeoutSeconds: 20
       - name: api-introduction
-        url: https://api-docs.deepseek.com/index
-        preferMarkdown: true
+        url: https://api-docs.deepseek.com/index.md
         enabled: true
         priority: 2
         tags: [api]
@@ -195,8 +175,7 @@ vendors:
         outputPath: data/deepseek/api-introduction.md
         timeoutSeconds: 20
       - name: api-chat
-        url: https://api-docs.deepseek.com/api/create-chat-completion
-        preferMarkdown: true
+        url: https://api-docs.deepseek.com/api/create-chat-completion.md
         enabled: true
         priority: 2
         tags: [api]
@@ -208,7 +187,6 @@ vendors:
     sources:
       - name: pricing
         url: https://openrouter.ai/pricing
-        preferMarkdown: true
         enabled: true
         priority: 1
         tags: [pricing]
@@ -217,7 +195,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-introduction
         url: https://openrouter.ai/docs/quickstart
-        preferMarkdown: true
         enabled: true
         priority: 2
         tags: [api]
@@ -226,7 +203,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-models
         url: https://openrouter.ai/models
-        preferMarkdown: true
         enabled: true
         priority: 2
         tags: [api, models]
@@ -235,7 +211,6 @@ vendors:
         timeoutSeconds: 20
       - name: api-errors
         url: https://openrouter.ai/docs/api-reference/errors
-        preferMarkdown: false
         enabled: true
         priority: 3
         tags: [api, errors]
