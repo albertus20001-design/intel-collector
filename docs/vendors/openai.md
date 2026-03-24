@@ -8,4 +8,3 @@ Source snapshots for openai.
 - [api-responses](https://github.com/albertus20001-design/intel-collector/blob/main/data/openai/api-responses.md)
 - [api-models](https://github.com/albertus20001-design/intel-collector/blob/main/data/openai/api-models.md)
 - [api-errors](https://github.com/albertus20001-design/intel-collector/blob/main/data/openai/api-errors.md)
-- [api-rate-limits](https://github.com/albertus20001-design/intel-collector/blob/main/data/openai/api-rate-limits.md)

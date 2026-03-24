@@ -1,3 +1,4 @@
+const base = 'https://github.com/albertus20001-design/intel-collector/blob/main/';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 
@@ -15,7 +16,7 @@ for (const raw of lines) {
 }
 
 for (const [v, sources] of Object.entries(vendors)) {
-  const md = `# ${v}\n\nSource snapshots for ${v}.\n\n` + sources.map(s => `- [${s}](../../data/${v}/${s}.md)`).join('\n') + '\n';
+  const md = `# ${v}\n\nSource snapshots for ${v}.\n\n` + sources.map(s => `- [${s}](${base}data/${v}/${s}.md)`).join('\n') + '\n';
   const file = `docs/vendors/${v}.md`;
   mkdirSync(dirname(file), { recursive: true });
   writeFileSync(file, md);

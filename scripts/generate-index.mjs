@@ -24,7 +24,8 @@ let md = `# Intel Collector\n\nGenerated from \`sources/index.yml\`.\n\n`;
 for (const [vendor, info] of Object.entries(vendors)) {
   md += `## ${vendor} (${info.group || 'ungrouped'})\n\n`;
   for (const src of info.sources) {
-    md += `- ${src.name} → ${src.outputPath || 'data/' + vendor + '/' + src.name + '.md'}\n`;
+    const file = src.outputPath || 'data/' + vendor + '/' + src.name + '.md';
+    md += `- [${src.name}](${base}${file})\n`;
   }
   md += '\n';
 }
