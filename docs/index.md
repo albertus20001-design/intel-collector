@@ -1,4 +1,4 @@
-# Intel Collector
+# Llm Collector
 
 Generated from `sources/index.yml`.
 

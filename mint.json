@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Intel Collector",
+  "name": "Llm Collector",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"

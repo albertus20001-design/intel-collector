@@ -1,6 +1,6 @@
-# intel-collector
+# llm-collector
 
-Model intelligence collection repo.
+LLM intelligence collection repo.
 
 - Vendors: 5
 - Sources: 25

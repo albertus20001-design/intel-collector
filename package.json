@@ -1,5 +1,5 @@
 {
-  "name": "intel-collector",
+  "name": "llm-collector",
   "private": true,
   "version": "0.1.0",
   "scripts": {
