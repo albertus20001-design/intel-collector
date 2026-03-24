@@ -3,6 +3,6 @@
 Model intelligence collection repo.
 
 - Vendors: 5
-- Sources: 28
+- Sources: 26
 
 See `docs/index.md` for the generated collection index.

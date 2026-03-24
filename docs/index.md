@@ -34,7 +34,6 @@ Generated from `sources/index.yml`.
 - pricing → data/deepseek/pricing.md
 - api-introduction → data/deepseek/api-introduction.md
 - api-chat → data/deepseek/api-chat.md
-- api-models → data/deepseek/api-models.md
 - api-errors → data/deepseek/api-errors.md
 
 ## openrouter (aggregator)
@@ -42,6 +41,5 @@ Generated from `sources/index.yml`.
 - pricing → data/openrouter/pricing.md
 - api-introduction → data/openrouter/api-introduction.md
 - api-models → data/openrouter/api-models.md
-- api-rate-limits → data/openrouter/api-rate-limits.md
 - api-errors → data/openrouter/api-errors.md
 
