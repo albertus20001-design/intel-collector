@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "mintlify dev",
     "build": "mintlify build",
-    "check": "mintlify build"
+    "check": "mintlify build",
+    "update:pricing": "node scripts/update-pricing.mjs"
   },
   "devDependencies": {
     "mintlify": "latest"
