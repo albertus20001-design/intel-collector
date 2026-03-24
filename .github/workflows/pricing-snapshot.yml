@@ -13,10 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-      - run: npm install
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - run: node scripts/validate-sources.mjs
 
   snapshot:
@@ -24,10 +28,14 @@ jobs:
     needs: validate
     steps:
       - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-      - run: npm install
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - run: node scripts/update-pricing.mjs
       - run: node scripts/generate-index.mjs
       - run: node scripts/generate-readme.mjs

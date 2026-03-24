@@ -9,7 +9,6 @@
     "update:pricing": "node scripts/update-pricing.mjs"
   },
   "devDependencies": {
-    "mintlify": "latest",
-    "turndown": "latest"
+    "mintlify": "latest"
   }
 }
