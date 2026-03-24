@@ -22,6 +22,38 @@ function fetchUrl(url, timeoutSeconds = DEFAULT_TIMEOUT) {
   }
 }
 
+function decodeEntities(s) {
+  return s
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
+function cleanHtml(html) {
+  let s = html;
+  s = s.replace(/<script[\s\S]*?<\/script>/gi, '\n');
+  s = s.replace(/<style[\s\S]*?<\/style>/gi, '\n');
+  s = s.replace(/<noscript[\s\S]*?<\/noscript>/gi, '\n');
+  s = s.replace(/<svg[\s\S]*?<\/svg>/gi, '\n');
+  s = s.replace(/<!--([\s\S]*?)-->/g, '\n');
+  s = s.replace(/<(h[1-6])[^>]*>/gi, '\n# ');
+  s = s.replace(/<\/h[1-6]>/gi, '\n\n');
+  s = s.replace(/<(p|div|section|article|main|header|footer|nav|aside|li|tr|td|th|ul|ol|table|thead|tbody|tfoot|blockquote|pre|code|br)[^>]*>/gi, '\n');
+  s = s.replace(/<[^>]+>/g, '');
+  s = decodeEntities(s);
+  s = s.replace(/[ \t]+\n/g, '\n');
+  s = s.replace(/\n{3,}/g, '\n\n');
+  return s.trim();
+}
+
+function isHtml(body) {
+  const trimmed = body.trimStart();
+  return /^<!doctype html>|^<html[\s>]/i.test(trimmed);
+}
+
 function isBadContent(body, patterns) {
   return patterns.some((p) => body.includes(p));
 }
@@ -73,7 +105,8 @@ for (const src of sources) {
   const result = fetchUrl(effectiveUrl, src.timeoutSeconds);
   const file = src.outputPath || `data/${src.vendor}/${src.name}.md`;
   mkdirSync(dirname(file), { recursive: true });
-  const body = result.ok ? result.body : result.body;
+  let body = result.ok ? result.body : result.body;
+  if (result.ok && isHtml(body)) body = cleanHtml(body);
   if ((!result.ok || isBadContent(body, src.rejectPatterns)) && existsSync(file)) {
     console.log(`skipped ${file} (fetch failed or rejected, keeping existing snapshot)`);
     continue;
