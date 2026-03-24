@@ -104,14 +104,6 @@ vendors:
         fetchMode: markdown
         outputPath: data/openai/api-errors.md
         timeoutSeconds: 20
-      - name: api-rate-limits
-        url: https://platform.openai.com/docs/guides/rate-limits
-        enabled: true
-        priority: 3
-        tags: [api, limits]
-        fetchMode: markdown
-        outputPath: data/openai/api-rate-limits.md
-        timeoutSeconds: 20
   google:
     group: flagship
     sources:
@@ -185,14 +177,6 @@ vendors:
   openrouter:
     group: aggregator
     sources:
-      - name: pricing
-        url: https://openrouter.ai/pricing
-        enabled: true
-        priority: 1
-        tags: [pricing]
-        fetchMode: markdown
-        outputPath: data/openrouter/pricing.md
-        timeoutSeconds: 20
       - name: api-introduction
         url: https://openrouter.ai/docs/quickstart
         enabled: true
@@ -208,12 +192,4 @@ vendors:
         tags: [api, models]
         fetchMode: markdown
         outputPath: data/openrouter/api-models.md
-        timeoutSeconds: 20
-      - name: api-errors
-        url: https://openrouter.ai/docs/api-reference/errors
-        enabled: true
-        priority: 3
-        tags: [api, errors]
-        fetchMode: markdown
-        outputPath: data/openrouter/api-errors.md
         timeoutSeconds: 20
