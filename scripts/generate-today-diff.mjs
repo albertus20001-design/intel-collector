@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs';
 
 function changedFiles() {
   try {
-    const out = execFileSync('git', ['diff', '--name-only', '--', 'data', 'docs', 'README.md', 'CHANGELOG.md', 'DAILY_SUMMARY.md'], { encoding: 'utf8' });
+    const out = execFileSync('git', ['diff', '--name-only', '--', 'data'], { encoding: 'utf8' });
     return out.split(/\r?\n/).filter(Boolean);
   } catch {
     return [];
@@ -50,9 +50,9 @@ for (const file of files) {
 
 let md = '# Today Diff\n\n';
 if (files.length === 0) {
-  md += '- No changes detected today.\n';
+  md += '今日无关键变化。\n';
 } else {
-  md += `- Changed files: ${files.length}\n\n`;
+  md += `今日有 ${files.length} 个数据文件变化。\n\n`;
   for (const [vendor, items] of vendors.entries()) {
     md += `## ${vendor}\n`;
     const groups = new Map();
@@ -66,11 +66,6 @@ if (files.length === 0) {
       for (const item of list) md += `- ${label(item)} (${item})\n`;
     }
     md += '\n';
-  }
-  const misc = files.filter(f => !f.startsWith('data/'));
-  if (misc.length) {
-    md += '## Docs / meta\n';
-    for (const f of misc) md += `- ${f}\n`;
   }
 }
 writeFileSync('TODAY_DIFF.md', md);
