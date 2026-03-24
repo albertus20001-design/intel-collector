@@ -1,35 +1,32 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "name": "Intel Collector",
-  "description": "A Mintlify docs site for tracking model/vendor/platform intelligence.",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Documentation",
-        "groups": [
-          {
-            "group": "Overview",
-            "expanded": true,
-            "pages": ["index", "change-log", "daily-summary", "today-diff"]
-          },
-          {
-            "group": "Collection",
-            "expanded": false,
-            "pages": ["collection/sources", "collection/schedule", "collection/output"]
-          },
-          {
-            "group": "Operations",
-            "expanded": false,
-            "pages": ["ops/runbook", "ops/changelog"]
-          },
-          {
-            "group": "Vendors",
-            "expanded": false,
-            "pages": ["vendors/anthropic", "vendors/openai", "vendors/google", "vendors/deepseek", "vendors/openrouter"]
-          }
-        ]
-      }
-    ]
-  }
+  "colors": {
+    "primary": "#7c3aed",
+    "light": "#a78bfa",
+    "dark": "#4c1d95"
+  },
+  "navigation": [
+    {
+      "group": "Overview",
+      "pages": ["index", "change-log", "daily-summary", "today-diff"]
+    },
+    {
+      "group": "Collection",
+      "pages": ["collection/sources", "collection/schedule", "collection/output"]
+    },
+    {
+      "group": "Operations",
+      "pages": ["ops/runbook", "ops/changelog"]
+    },
+    {
+      "group": "Vendors",
+      "pages": ["vendors/anthropic", "vendors/openai", "vendors/google", "vendors/deepseek", "vendors/openrouter"]
+    }
+  ]
 }
