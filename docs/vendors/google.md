@@ -7,3 +7,5 @@ Source snapshots for google.
 - [api-models](https://github.com/albertus20001-design/llm-collector/blob/main/data/google/api-models.md)
 - [api-structured-output](https://github.com/albertus20001-design/llm-collector/blob/main/data/google/api-structured-output.md)
 - [api-errors](https://github.com/albertus20001-design/llm-collector/blob/main/data/google/api-errors.md)
+- [api-rate-limits](https://github.com/albertus20001-design/llm-collector/blob/main/data/google/api-rate-limits.md)
+- [api-function-calling](https://github.com/albertus20001-design/llm-collector/blob/main/data/google/api-function-calling.md)
