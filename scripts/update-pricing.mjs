@@ -1,24 +1,38 @@
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs';
 import { dirname } from 'node:path';
 
-const DEFAULT_TIMEOUT = '20';
+const DEFAULT_TIMEOUT = 20;
+const CURL_HEADERS = [
+  '-A', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+  '-H', 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,text/markdown,text/plain;q=0.8,*/*;q=0.7',
+  '-H', 'Accept-Language: en-US,en;q=0.9'
+];
+const GLOBAL_REJECT_PATTERNS = [
+  'ERROR_FETCHING_URL',
+  'Author Not Found',
+  '<title>403: Forbidden</title>',
+  '403: Forbidden',
+  'Just a moment...',
+  'Enable JavaScript and cookies to continue',
+  'Attention Required! | Cloudflare',
+  'cf-challenge',
+  '__cf_chl_tk'
+];
 
-function probeUrl(url, timeoutSeconds = DEFAULT_TIMEOUT) {
-  try {
-    const out = execFileSync('curl', ['-L', '--silent', '--show-error', '--max-time', String(timeoutSeconds), '-o', '/dev/null', '-w', '%{url_effective}', url], { encoding: 'utf8', maxBuffer: 1024 * 1024 });
-    return out.trim();
-  } catch {
-    return url;
-  }
+function runCurl(args, maxBuffer = 20 * 1024 * 1024) {
+  return execFileSync('curl', args, {
+    encoding: 'utf8',
+    maxBuffer
+  });
 }
 
-function fetchUrl(url, timeoutSeconds = DEFAULT_TIMEOUT) {
+function tryFetch(url, timeoutSeconds = DEFAULT_TIMEOUT) {
   try {
-    const body = execFileSync('curl', ['-L', '--fail', '--silent', '--show-error', '--max-time', String(timeoutSeconds), url], { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
-    return { ok: true, body };
-  } catch (e) {
-    return { ok: false, body: `ERROR_FETCHING_URL\n${String(e.stderr || e.message || e)}` };
+    const body = runCurl(['-L', '--fail', '--silent', '--show-error', '--compressed', '--max-time', String(timeoutSeconds), ...CURL_HEADERS, url]);
+    return { ok: true, body, url };
+  } catch (error) {
+    return { ok: false, error: String(error.stderr || error.message || error), url };
   }
 }
 
@@ -54,8 +68,21 @@ function shouldCleanHtml(body) {
   return /^<!doctype html>|^<html[\s>]/i.test(t) || /<html|<script|window\.dataLayer|__NEXT_DATA__|requestAnimationFrame|document\.documentElement/i.test(body);
 }
 
-function isBadContent(body, patterns) {
-  return patterns.some((p) => body.includes(p));
+function isRejectedContent(body, patterns = []) {
+  const checks = [...GLOBAL_REJECT_PATTERNS, ...patterns];
+  return checks.some((p) => body.includes(p));
+}
+
+function hasFailedSnapshot(file) {
+  if (!existsSync(file)) return false;
+  const body = readFileSync(file, 'utf8');
+  return isRejectedContent(body);
+}
+
+function cleanupFailedSnapshot(file) {
+  if (!hasFailedSnapshot(file)) return false;
+  unlinkSync(file);
+  return true;
 }
 
 function parseSourcesYaml(yml) {
@@ -88,29 +115,41 @@ function parseSourcesYaml(yml) {
     m = line.match(/^\s{8}rejectPatterns:\s*$/); if (m) { current.rejectPatterns = []; continue; }
     m = line.match(/^\s{10}-\s*(.+)\s*$/); if (m) { current.rejectPatterns.push(m[1]); continue; }
   }
-  return items.filter(x => x.vendor && x.name && x.url && x.enabled !== false).sort((a,b)=>(a.priority??99)-(b.priority??99));
+  return items.filter((x) => x.vendor && x.name && x.url && x.enabled !== false).sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99));
 }
 
-function resolveSourceUrl(src) {
-  if (src.url.endsWith('.md') || src.url.endsWith('.txt')) return src.url;
-  const md = `${src.url}.md`;
-  const effective = probeUrl(md, src.timeoutSeconds);
-  if (effective.endsWith('.md') || effective.endsWith('.txt')) return effective;
-  return src.url;
+function fetchSource(src) {
+  const candidates = [];
+  if (!src.url.endsWith('.md') && !src.url.endsWith('.txt')) candidates.push(`${src.url}.md`);
+  candidates.push(src.url);
+
+  for (const candidate of candidates) {
+    const result = tryFetch(candidate, src.timeoutSeconds);
+    if (!result.ok) continue;
+    let body = result.body;
+    if (shouldCleanHtml(body)) body = cleanHtml(body);
+    if (isRejectedContent(body, src.rejectPatterns)) continue;
+    return { ok: true, body, url: candidate };
+  }
+
+  return { ok: false };
 }
 
 const sources = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8'));
 for (const src of sources) {
-  const effectiveUrl = resolveSourceUrl(src);
-  const result = fetchUrl(effectiveUrl, src.timeoutSeconds);
   const file = src.outputPath || `data/${src.vendor}/${src.name}.md`;
   mkdirSync(dirname(file), { recursive: true });
-  let body = result.ok ? result.body : result.body;
-  if (result.ok && shouldCleanHtml(body)) body = cleanHtml(body);
-  if ((!result.ok || isBadContent(body, src.rejectPatterns)) && existsSync(file)) {
-    console.log(`skipped ${file} (fetch failed or rejected, keeping existing snapshot)`);
+
+  const result = fetchSource(src);
+  if (!result.ok) {
+    if (cleanupFailedSnapshot(file)) {
+      console.log(`removed failed snapshot ${file}`);
+    } else {
+      console.log(`skipped ${file} (fetch failed or rejected, keeping existing snapshot)`);
+    }
     continue;
   }
-  writeFileSync(file, body.trimEnd() + '\n');
+
+  writeFileSync(file, result.body.trimEnd() + '\n');
   console.log(`updated ${file}`);
 }

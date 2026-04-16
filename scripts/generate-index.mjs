@@ -1,6 +1,8 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { dirname } from 'node:path';
 
+const base = 'https://github.com/albertus20001-design/llm-collector/blob/main/';
+
 function parseSourcesYaml(yml) {
   const lines = yml.split(/\r?\n/);
   const vendors = {};

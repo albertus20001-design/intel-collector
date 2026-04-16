@@ -4,23 +4,19 @@ title: Quickstart
 subtitle: Get started with OpenRouter
 slug: quickstart
 headline: OpenRouter Quickstart Guide | Developer Documentation
-canonical-url: '[https://openrouter.ai/docs/quickstart](https://openrouter.ai/docs/quickstart)'
-'og:site\_name': OpenRouter Documentation
-'og:title': OpenRouter Quickstart Guide
-'og:description': >-
-Get started with OpenRouter's unified API for hundreds of AI models. Learn how
-to integrate using OpenAI SDK, direct API calls, or third-party frameworks.
-'og:image':
-type: url
-value: >-
-[https://openrouter.ai/dynamic-og?pathname=quickstart\&title=Quick%20Start\&description=Start%20using%20OpenRouter%20API%20in%20minutes%20with%20any%20SDK](https://openrouter.ai/dynamic-og?pathname=quickstart\&title=Quick%20Start\&description=Start%20using%20OpenRouter%20API%20in%20minutes%20with%20any%20SDK)
-'og:image:width': 1200
-'og:image:height': 630
-'twitter:card': summary\_large\_image
-'twitter:site': '@OpenRouter'
+canonical-url: https://openrouter.ai/docs/quickstart
+og:site_name: OpenRouter Documentation
+og:title: OpenRouter Quickstart Guide
+og:description: Get started with OpenRouter's unified API for hundreds of AI models. Learn how to integrate using OpenAI SDK, direct API calls, or third-party frameworks.
+og:image:width: 1200
+og:image:height: 630
+twitter:card: summary_large_image
+twitter:site: @OpenRouter
 noindex: false
 nofollow: false
----------------
+---------------------
+
+For clean Markdown of any page, append .md to the page URL. For a complete documentation index, see https://openrouter.ai/docs/llms.txt. For full documentation content, see https://openrouter.ai/docs/llms-full.txt.
 
 OpenRouter provides a unified API that gives you access to hundreds of AI models through a single endpoint, while automatically handling fallbacks and selecting the most cost-effective options. Get started with just a few lines of code using your preferred SDK or framework.
 

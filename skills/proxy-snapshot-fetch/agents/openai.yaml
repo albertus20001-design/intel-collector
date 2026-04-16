@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proxy Snapshot Fetch"
+  short_description: "Refresh repo snapshots through a local proxy safely"
+  default_prompt: "Use $proxy-snapshot-fetch to refresh this repo's vendor snapshots through the local proxy without keeping failed fetch content."

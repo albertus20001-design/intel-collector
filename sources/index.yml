@@ -64,38 +64,6 @@ vendors:
         fetchMode: markdown
         outputPath: data/openai/pricing.md
         timeoutSeconds: 20
-      - name: api-introduction
-        url: https://platform.openai.com/docs/api-reference/introduction
-        enabled: true
-        priority: 2
-        tags: [api]
-        fetchMode: markdown
-        outputPath: data/openai/api-introduction.md
-        timeoutSeconds: 20
-      - name: api-chat
-        url: https://platform.openai.com/docs/api-reference/chat
-        enabled: true
-        priority: 2
-        tags: [api]
-        fetchMode: markdown
-        outputPath: data/openai/api-chat.md
-        timeoutSeconds: 20
-      - name: api-responses
-        url: https://platform.openai.com/docs/api-reference/responses
-        enabled: true
-        priority: 2
-        tags: [api]
-        fetchMode: markdown
-        outputPath: data/openai/api-responses.md
-        timeoutSeconds: 20
-      - name: api-models
-        url: https://platform.openai.com/docs/models
-        enabled: true
-        priority: 2
-        tags: [api, models]
-        fetchMode: markdown
-        outputPath: data/openai/api-models.md
-        timeoutSeconds: 20
       - name: api-errors
         url: https://platform.openai.com/docs/guides/error-codes
         enabled: true
@@ -174,6 +142,30 @@ vendors:
         fetchMode: markdown
         outputPath: data/deepseek/api-chat.md
         timeoutSeconds: 20
+      - name: api-models
+        url: https://api-docs.deepseek.com/api/list-models
+        enabled: true
+        priority: 2
+        tags: [api, models]
+        fetchMode: markdown
+        outputPath: data/deepseek/api-models.md
+        timeoutSeconds: 20
+      - name: api-errors
+        url: https://api-docs.deepseek.com/quick_start/error_codes
+        enabled: true
+        priority: 3
+        tags: [api, errors]
+        fetchMode: markdown
+        outputPath: data/deepseek/api-errors.md
+        timeoutSeconds: 20
+      - name: api-rate-limits
+        url: https://api-docs.deepseek.com/quick_start/rate_limit
+        enabled: true
+        priority: 3
+        tags: [api, limits]
+        fetchMode: markdown
+        outputPath: data/deepseek/api-rate-limits.md
+        timeoutSeconds: 20
   openrouter:
     group: aggregator
     sources:
@@ -186,10 +178,18 @@ vendors:
         outputPath: data/openrouter/api-introduction.md
         timeoutSeconds: 20
       - name: api-models
-        url: https://openrouter.ai/models
+        url: https://openrouter.ai/docs/guides/overview/models
         enabled: true
         priority: 2
         tags: [api, models]
         fetchMode: markdown
         outputPath: data/openrouter/api-models.md
+        timeoutSeconds: 20
+      - name: api-rate-limits
+        url: https://openrouter.ai/docs/api/reference/limits
+        enabled: true
+        priority: 3
+        tags: [api, limits]
+        fetchMode: markdown
+        outputPath: data/openrouter/api-rate-limits.md
         timeoutSeconds: 20
