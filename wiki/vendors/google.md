@@ -1,6 +1,6 @@
-# google
+# Google
 
-Raw snapshots for google, organized for quick browsing.
+Google 的原始资料快照，按快速浏览场景整理。
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
 - [api-overview](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-overview.md)

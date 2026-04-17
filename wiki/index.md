@@ -1,10 +1,10 @@
-# Llm Collector Wiki
+# LLM Collector 知识库
 
-Generated from `sources/index.yml`.
+由 `sources/index.yml` 自动生成。
 
-This index points to the raw source snapshots stored under `raw/`.
+这个索引页汇总了存放在 `raw/` 目录下的原始来源快照，方便快速查看各厂商资料。
 
-## anthropic (flagship)
+## Anthropic（头部厂商）
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
 - [api-messages](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-messages.md)
@@ -15,7 +15,7 @@ This index points to the raw source snapshots stored under `raw/`.
 - [api-overview](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-overview.md)
 - [api-models-api](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models-api.md)
 
-## openai (flagship)
+## OpenAI（头部厂商）
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
 - [api-responses](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)
@@ -23,7 +23,7 @@ This index points to the raw source snapshots stored under `raw/`.
 - [api-rate-limits](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-rate-limits.md)
 - [api-errors](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-errors.md)
 
-## google (flagship)
+## Google（头部厂商）
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
 - [api-overview](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-overview.md)
@@ -33,7 +33,7 @@ This index points to the raw source snapshots stored under `raw/`.
 - [api-rate-limits](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-rate-limits.md)
 - [api-function-calling](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-function-calling.md)
 
-## deepseek (challenger)
+## DeepSeek（挑战者）
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
 - [api-introduction](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-introduction.md)
@@ -44,7 +44,7 @@ This index points to the raw source snapshots stored under `raw/`.
 - [api-function-calling](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-function-calling.md)
 - [api-json-output](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-json-output.md)
 
-## openrouter (aggregator)
+## OpenRouter（聚合平台）
 
 - [api-introduction](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-introduction.md)
 - [api-models](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
@@ -56,4 +56,3 @@ This index points to the raw source snapshots stored under `raw/`.
 - [faq](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
 - [api-rate-limits](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-rate-limits.md)
 - [api-errors](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-errors.md)
-

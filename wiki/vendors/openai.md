@@ -1,6 +1,6 @@
-# openai
+# OpenAI
 
-Raw snapshots for openai, organized for quick browsing.
+OpenAI 的原始资料快照，按快速浏览场景整理。
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
 - [api-responses](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)

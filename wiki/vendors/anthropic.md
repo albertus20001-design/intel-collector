@@ -1,6 +1,6 @@
-# anthropic
+# Anthropic
 
-Raw snapshots for anthropic, organized for quick browsing.
+Anthropic 的原始资料快照，按快速浏览场景整理。
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
 - [api-messages](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-messages.md)

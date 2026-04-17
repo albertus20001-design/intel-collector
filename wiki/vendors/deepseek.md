@@ -1,6 +1,6 @@
-# deepseek
+# DeepSeek
 
-Raw snapshots for deepseek, organized for quick browsing.
+DeepSeek 的原始资料快照，按快速浏览场景整理。
 
 - [pricing](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
 - [api-introduction](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-introduction.md)

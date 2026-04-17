@@ -1,6 +1,6 @@
-# openrouter
+# OpenRouter
 
-Raw snapshots for openrouter, organized for quick browsing.
+OpenRouter 的原始资料快照，按快速浏览场景整理。
 
 - [api-introduction](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-introduction.md)
 - [api-models](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
