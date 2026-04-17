@@ -1,24 +1,30 @@
+Source: https://ai.google.dev/gemini-api/docs/models.md.txt
+
 > [!IMPORTANT]
 > We have updated our [Terms of Service](https://ai.google.dev/gemini-api/terms).
 
 *** ** * ** ***
 
-> [!WARNING]
-> **Warning:** Gemini 3 Pro Preview is [deprecated](https://ai.google.dev/gemini-api/docs/deprecations) and has been shut down March 9, 2026. Migrate to [Gemini 3.1 Pro Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview) to avoid service disruption.
-
 ## Gemini 3
 
 [### Gemini 3.1 Pro
 Advanced intelligence, complex problem-solving skills, and powerful agentic and vibe coding capabilities.
-New Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview) [### Gemini 3 Flash
+Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview) [### Gemini 3 Flash
 Frontier-class performance rivaling larger models at a fraction of the cost.
 Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3-flash-preview) [### Gemini 3.1 Flash-Lite
 Frontier-class performance rivaling larger models at a fraction of the cost.
-New Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview) [### Nano Banana 2
+Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-lite-preview) [### Nano Banana 2
 Powerful, high-efficiency image generation and editing, optimized for speed and high-volume use cases.
 Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-image-preview) [### Nano Banana Pro
 State-of-the-art image generation and editing models for highly contextual native image creation.
-Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image-preview)
+Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image-preview) [### Gemini 3.1 Flash Live
+High-quality, low-latency Live API model for real-time dialogue and voice-first AI applications.
+New Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview) [### Gemini 3.1 Flash TTS
+Powerful, low-latency speech generation.
+New Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-tts-preview)
+
+> [!WARNING]
+> **Warning:** Gemini 3 Pro Preview is [deprecated](https://ai.google.dev/gemini-api/docs/deprecations) and has been shut down March 9, 2026. Migrate to [Gemini 3.1 Pro Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview) to avoid service disruption.
 
 *** ** * ** ***
 
@@ -66,6 +72,14 @@ High-fidelity speech synthesis optimized for quality in structured workflows lik
 
 *This section contains all audio models, including ones that may already be listed in other sections*
 
+### [Gemini 3.1 Flash Live Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-live-preview)
+
+Our high-quality, low-latency audio-to-audio (A2A) model designed for real-time dialogue and voice-first AI applications.
+
+### [Gemini 3.1 Flash TTS Preview](https://ai.google.dev/gemini-api/docs/models/gemini-3.1-flash-tts-preview)
+
+Powerful, low-latency speech generation, with natural outputs, steerable prompts, and new expressive audio tags for precise narration control.
+
 ### [Gemini 2.5 Flash Live Preview](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-native-audio-preview-12-2025)
 
 Our flagship Live API model for low-latency, bidirectional voice and video agents with native audio reasoning.
@@ -77,10 +91,6 @@ Fast and controllable text-to-speech for low-latency, cost-efficient application
 ### [Gemini 2.5 Pro TTS Preview](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-pro-preview-tts)
 
 High-fidelity speech synthesis optimized for quality in structured workflows like podcasts and audiobooks.
-
-### [Lyria Experimental](https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp)
-
-High-fidelity music generation model providing granular creative control over instruments, BPM, and complex compositions.
 
 *** ** * ** ***
 
@@ -100,9 +110,9 @@ State-of-the-art cinematic video generation with advanced creative controls and 
 
 A professional design engine with a reasoning core for studio-quality 4K visuals, complex layouts, and precise text rendering.
 
-### [Lyria Experimental](https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp)
+### [Veo 3.1 Lite Preview](https://ai.google.dev/gemini-api/docs/models/veo-3.1-lite-generate-preview)
 
-High-fidelity music generation model providing granular creative control over instruments, BPM, and complex compositions.
+High-efficiency, low-cost, developer-first video generation, editing, and cinematic control from the Veo 3.1 family.
 
 ### [Nano Banana](https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-image)
 
@@ -111,6 +121,24 @@ State-of-the-art native image generation and editing designed for fast, creative
 ### [Imagen 4](https://ai.google.dev/gemini-api/docs/models/imagen)
 
 Text-to-image model yet, featuring fast and ultra-fast generation and exceptional clarity up to 2K resolution.
+
+*** ** * ** ***
+
+## Music generation models
+
+*This section contains all music generation models, including ones that may already be listed in other sections*
+
+### [Lyria 3 Pro Preview](https://ai.google.dev/gemini-api/docs/models/lyria-3-pro-preview)
+
+Our flagship music generation model, optimized for full-length songs with complex structural coherence.
+
+### [Lyria 3 Clip Preview](https://ai.google.dev/gemini-api/docs/models/lyria-3-clip-preview)
+
+Optimized for generating short musical clips, loops, and previews up to 30 seconds.
+
+### [Lyria RealTime Experimental](https://ai.google.dev/gemini-api/docs/models/lyria-realtime-exp)
+
+High-fidelity music generation model providing granular creative control and real-time streaming capabilities.
 
 *** ** * ** ***
 
@@ -136,7 +164,11 @@ Our first multimodal embedding model, mapping text, images, video, audio, and PD
 
 High-dimensional vector representations for advanced semantic search, text classification, and RAG systems.
 
-### [Gemini Robotics Preview](https://ai.google.dev/gemini-api/docs/models/gemini-robotics-er-1.5-preview)
+### [Gemini Robotics-ER 1.6Preview](https://ai.google.dev/gemini-api/docs/models/gemini-robotics-er-1.6-preview)
+
+Advanced embodied reasoning model that understands physical spaces and plans multi-step tasks for robotic agents with new capabilities like instrument reading, improved spatial and physical reasoning.
+
+### [Gemini Robotics-ER 1.5Preview](https://ai.google.dev/gemini-api/docs/models/gemini-robotics-er-1.5-preview)
 
 Advanced embodied reasoning model that understands physical spaces and plans multi-step tasks for robotic agents.
 
