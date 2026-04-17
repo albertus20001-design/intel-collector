@@ -404,31 +404,31 @@ OpenRouter exposes a way to inspect modality support and image-related pricing p
 ## Best local files for each topic
 
 ### Cache pricing
-- `data/anthropic/pricing.md`
-- `data/openai/pricing.md`
-- `data/google/pricing.md`
-- `data/deepseek/pricing.md`
-- `data/openrouter/api-models.md`
+- `raw/anthropic/pricing.md`
+- `raw/openai/pricing.md`
+- `raw/google/pricing.md`
+- `raw/deepseek/pricing.md`
+- `raw/openrouter/api-models.md`
 
 ### Input prompt length pricing
-- `data/google/pricing.md`
-- `data/anthropic/pricing.md`
-- `data/openai/pricing.md`
+- `raw/google/pricing.md`
+- `raw/anthropic/pricing.md`
+- `raw/openai/pricing.md`
 
 ### Server tool / server-side call pricing
-- `data/anthropic/pricing.md`
-- `data/google/pricing.md`
-- `data/openrouter/api-models.md`
+- `raw/anthropic/pricing.md`
+- `raw/google/pricing.md`
+- `raw/openrouter/api-models.md`
 
 ### Multimodal pricing
-- `data/google/pricing.md`
-- `data/openai/pricing.md`
-- `data/anthropic/pricing.md`
-- `data/openrouter/api-models.md`
+- `raw/google/pricing.md`
+- `raw/openai/pricing.md`
+- `raw/anthropic/pricing.md`
+- `raw/openrouter/api-models.md`
 
 ## Current evidence caveats
 
-- `data/openai/pricing.md` is useful but partially source-code/table-structure oriented, so read conservatively.
-- `data/deepseek/pricing.md` is concise and may include extraction noise, but the cache-hit/cache-miss signal is clear.
-- `data/openrouter/api-models.md` is a schema-level pricing reference, not a single unified price table.
+- `raw/openai/pricing.md` is useful but partially source-code/table-structure oriented, so read conservatively.
+- `raw/deepseek/pricing.md` is concise and may include extraction noise, but the cache-hit/cache-miss signal is clear.
+- `raw/openrouter/api-models.md` is a schema-level pricing reference, not a single unified price table.
 - OpenRouter usage-accounting expansion mentioned in earlier work is not present in this worktree, so current offline answers should remain schema-based for OpenRouter pricing mechanics.

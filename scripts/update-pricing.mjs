@@ -137,7 +137,7 @@ function fetchSource(src) {
 
 const sources = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8'));
 for (const src of sources) {
-  const file = src.outputPath || `data/${src.vendor}/${src.name}.md`;
+  const file = src.outputPath || `raw/${src.vendor}/${src.name}.md`;
   mkdirSync(dirname(file), { recursive: true });
 
   const result = fetchSource(src);

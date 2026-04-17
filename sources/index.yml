@@ -9,7 +9,7 @@ vendors:
         tags: [pricing]
         notes: App unavailable in region if blocked
         fetchMode: text
-        outputPath: data/anthropic/pricing.md
+        outputPath: raw/anthropic/pricing.md
         timeoutSeconds: 20
         rejectPatterns:
           - App unavailable in region
@@ -19,7 +19,7 @@ vendors:
         priority: 2
         tags: [api]
         fetchMode: markdown
-        outputPath: data/anthropic/api-messages.md
+        outputPath: raw/anthropic/api-messages.md
         timeoutSeconds: 20
       - name: api-completions
         url: https://platform.claude.com/docs/en/api/completions.md
@@ -27,7 +27,7 @@ vendors:
         priority: 2
         tags: [api]
         fetchMode: markdown
-        outputPath: data/anthropic/api-completions.md
+        outputPath: raw/anthropic/api-completions.md
         timeoutSeconds: 20
       - name: api-models
         url: https://platform.claude.com/docs/en/about-claude/models.md
@@ -35,7 +35,7 @@ vendors:
         priority: 2
         tags: [api, models]
         fetchMode: markdown
-        outputPath: data/anthropic/api-models.md
+        outputPath: raw/anthropic/api-models.md
         timeoutSeconds: 20
       - name: api-error-codes
         url: https://platform.claude.com/docs/en/api/errors.md
@@ -43,7 +43,7 @@ vendors:
         priority: 3
         tags: [api, errors]
         fetchMode: markdown
-        outputPath: data/anthropic/api-error-codes.md
+        outputPath: raw/anthropic/api-error-codes.md
         timeoutSeconds: 20
       - name: api-rate-limits
         url: https://platform.claude.com/docs/en/api/rate-limits.md
@@ -51,7 +51,7 @@ vendors:
         priority: 3
         tags: [api, limits]
         fetchMode: markdown
-        outputPath: data/anthropic/api-rate-limits.md
+        outputPath: raw/anthropic/api-rate-limits.md
         timeoutSeconds: 20
       - name: api-overview
         url: https://platform.claude.com/docs/en/api/overview.md
@@ -59,7 +59,7 @@ vendors:
         priority: 2
         tags: [api, overview]
         fetchMode: markdown
-        outputPath: data/anthropic/api-overview.md
+        outputPath: raw/anthropic/api-overview.md
         timeoutSeconds: 20
       - name: api-models-api
         url: https://platform.claude.com/docs/en/api/models.md
@@ -67,7 +67,7 @@ vendors:
         priority: 2
         tags: [api, models]
         fetchMode: markdown
-        outputPath: data/anthropic/api-models-api.md
+        outputPath: raw/anthropic/api-models-api.md
         timeoutSeconds: 20
   openai:
     group: flagship
@@ -78,7 +78,7 @@ vendors:
         priority: 1
         tags: [pricing]
         fetchMode: markdown
-        outputPath: data/openai/pricing.md
+        outputPath: raw/openai/pricing.md
         timeoutSeconds: 20
       - name: api-responses
         url: https://developers.openai.com/api/reference/resources/responses/methods/create/index.md
@@ -86,7 +86,7 @@ vendors:
         priority: 2
         tags: [api, responses]
         fetchMode: markdown
-        outputPath: data/openai/api-responses.md
+        outputPath: raw/openai/api-responses.md
         timeoutSeconds: 20
       - name: api-models
         url: https://developers.openai.com/api/reference/resources/models/methods/list/index.md
@@ -94,7 +94,7 @@ vendors:
         priority: 2
         tags: [api, models]
         fetchMode: markdown
-        outputPath: data/openai/api-models.md
+        outputPath: raw/openai/api-models.md
         timeoutSeconds: 20
       - name: api-rate-limits
         url: https://developers.openai.com/api/docs/guides/rate-limits.md
@@ -102,7 +102,7 @@ vendors:
         priority: 3
         tags: [api, limits]
         fetchMode: markdown
-        outputPath: data/openai/api-rate-limits.md
+        outputPath: raw/openai/api-rate-limits.md
         timeoutSeconds: 20
       - name: api-errors
         url: https://developers.openai.com/api/docs/guides/error-codes.md
@@ -110,7 +110,7 @@ vendors:
         priority: 3
         tags: [api, errors]
         fetchMode: markdown
-        outputPath: data/openai/api-errors.md
+        outputPath: raw/openai/api-errors.md
         timeoutSeconds: 20
   google:
     group: flagship
@@ -121,7 +121,7 @@ vendors:
         priority: 1
         tags: [pricing]
         fetchMode: markdown
-        outputPath: data/google/pricing.md
+        outputPath: raw/google/pricing.md
         timeoutSeconds: 20
       - name: api-overview
         url: https://ai.google.dev/gemini-api/docs.md.txt
@@ -129,7 +129,7 @@ vendors:
         priority: 2
         tags: [api]
         fetchMode: markdown
-        outputPath: data/google/api-overview.md
+        outputPath: raw/google/api-overview.md
         timeoutSeconds: 20
       - name: api-models
         url: https://ai.google.dev/gemini-api/docs/models.md.txt
@@ -137,7 +137,7 @@ vendors:
         priority: 2
         tags: [api, models]
         fetchMode: markdown
-        outputPath: data/google/api-models.md
+        outputPath: raw/google/api-models.md
         timeoutSeconds: 20
       - name: api-structured-output
         url: https://ai.google.dev/gemini-api/docs/structured-output.md.txt
@@ -145,7 +145,7 @@ vendors:
         priority: 2
         tags: [api, format]
         fetchMode: markdown
-        outputPath: data/google/api-structured-output.md
+        outputPath: raw/google/api-structured-output.md
         timeoutSeconds: 20
       - name: api-errors
         url: https://ai.google.dev/gemini-api/docs/troubleshooting.md.txt
@@ -153,7 +153,7 @@ vendors:
         priority: 3
         tags: [api, errors]
         fetchMode: markdown
-        outputPath: data/google/api-errors.md
+        outputPath: raw/google/api-errors.md
         timeoutSeconds: 20
       - name: api-rate-limits
         url: https://ai.google.dev/gemini-api/docs/rate-limits.md.txt
@@ -161,7 +161,7 @@ vendors:
         priority: 3
         tags: [api, limits]
         fetchMode: markdown
-        outputPath: data/google/api-rate-limits.md
+        outputPath: raw/google/api-rate-limits.md
         timeoutSeconds: 20
       - name: api-function-calling
         url: https://ai.google.dev/gemini-api/docs/function-calling.md.txt
@@ -169,7 +169,7 @@ vendors:
         priority: 2
         tags: [api, tools, function-calling]
         fetchMode: markdown
-        outputPath: data/google/api-function-calling.md
+        outputPath: raw/google/api-function-calling.md
         timeoutSeconds: 20
   deepseek:
     group: challenger
@@ -180,7 +180,7 @@ vendors:
         priority: 1
         tags: [pricing]
         fetchMode: markdown
-        outputPath: data/deepseek/pricing.md
+        outputPath: raw/deepseek/pricing.md
         timeoutSeconds: 20
       - name: api-introduction
         url: https://api-docs.deepseek.com/
@@ -188,7 +188,7 @@ vendors:
         priority: 2
         tags: [api]
         fetchMode: markdown
-        outputPath: data/deepseek/api-introduction.md
+        outputPath: raw/deepseek/api-introduction.md
         timeoutSeconds: 20
       - name: api-chat
         url: https://api-docs.deepseek.com/api/create-chat-completion
@@ -196,7 +196,7 @@ vendors:
         priority: 2
         tags: [api]
         fetchMode: markdown
-        outputPath: data/deepseek/api-chat.md
+        outputPath: raw/deepseek/api-chat.md
         timeoutSeconds: 20
       - name: api-models
         url: https://api-docs.deepseek.com/api/list-models
@@ -204,7 +204,7 @@ vendors:
         priority: 2
         tags: [api, models]
         fetchMode: markdown
-        outputPath: data/deepseek/api-models.md
+        outputPath: raw/deepseek/api-models.md
         timeoutSeconds: 20
       - name: api-errors
         url: https://api-docs.deepseek.com/quick_start/error_codes
@@ -212,7 +212,7 @@ vendors:
         priority: 3
         tags: [api, errors]
         fetchMode: markdown
-        outputPath: data/deepseek/api-errors.md
+        outputPath: raw/deepseek/api-errors.md
         timeoutSeconds: 20
       - name: api-rate-limits
         url: https://api-docs.deepseek.com/quick_start/rate_limit
@@ -220,7 +220,7 @@ vendors:
         priority: 3
         tags: [api, limits]
         fetchMode: markdown
-        outputPath: data/deepseek/api-rate-limits.md
+        outputPath: raw/deepseek/api-rate-limits.md
         timeoutSeconds: 20
       - name: api-function-calling
         url: https://api-docs.deepseek.com/guides/function_calling
@@ -228,7 +228,7 @@ vendors:
         priority: 2
         tags: [api, tools, function-calling]
         fetchMode: markdown
-        outputPath: data/deepseek/api-function-calling.md
+        outputPath: raw/deepseek/api-function-calling.md
         timeoutSeconds: 20
       - name: api-json-output
         url: https://api-docs.deepseek.com/guides/json_mode
@@ -236,7 +236,7 @@ vendors:
         priority: 2
         tags: [api, format, structured-output]
         fetchMode: markdown
-        outputPath: data/deepseek/api-json-output.md
+        outputPath: raw/deepseek/api-json-output.md
         timeoutSeconds: 20
   openrouter:
     group: aggregator
@@ -247,7 +247,7 @@ vendors:
         priority: 2
         tags: [api]
         fetchMode: markdown
-        outputPath: data/openrouter/api-introduction.md
+        outputPath: raw/openrouter/api-introduction.md
         timeoutSeconds: 20
       - name: api-models
         url: https://openrouter.ai/docs/guides/overview/models
@@ -255,7 +255,7 @@ vendors:
         priority: 2
         tags: [api, models]
         fetchMode: markdown
-        outputPath: data/openrouter/api-models.md
+        outputPath: raw/openrouter/api-models.md
         timeoutSeconds: 20
       - name: api-authentication
         url: https://openrouter.ai/docs/api/reference/authentication
@@ -263,7 +263,7 @@ vendors:
         priority: 2
         tags: [api, auth]
         fetchMode: markdown
-        outputPath: data/openrouter/api-authentication.md
+        outputPath: raw/openrouter/api-authentication.md
         timeoutSeconds: 20
       - name: api-parameters
         url: https://openrouter.ai/docs/api/reference/parameters
@@ -271,7 +271,7 @@ vendors:
         priority: 2
         tags: [api, parameters]
         fetchMode: markdown
-        outputPath: data/openrouter/api-parameters.md
+        outputPath: raw/openrouter/api-parameters.md
         timeoutSeconds: 20
       - name: api-responses
         url: https://openrouter.ai/docs/api/reference/responses/overview
@@ -279,7 +279,7 @@ vendors:
         priority: 2
         tags: [api, responses]
         fetchMode: markdown
-        outputPath: data/openrouter/api-responses.md
+        outputPath: raw/openrouter/api-responses.md
         timeoutSeconds: 20
       - name: routing-provider-selection
         url: https://openrouter.ai/docs/guides/routing/provider-selection
@@ -287,7 +287,7 @@ vendors:
         priority: 2
         tags: [routing, providers]
         fetchMode: markdown
-        outputPath: data/openrouter/routing-provider-selection.md
+        outputPath: raw/openrouter/routing-provider-selection.md
         timeoutSeconds: 20
       - name: feature-structured-outputs
         url: https://openrouter.ai/docs/guides/features/structured-outputs
@@ -295,7 +295,7 @@ vendors:
         priority: 2
         tags: [api, structured-output]
         fetchMode: markdown
-        outputPath: data/openrouter/feature-structured-outputs.md
+        outputPath: raw/openrouter/feature-structured-outputs.md
         timeoutSeconds: 20
       - name: faq
         url: https://openrouter.ai/docs/faq
@@ -303,7 +303,7 @@ vendors:
         priority: 2
         tags: [faq, pricing, limits]
         fetchMode: markdown
-        outputPath: data/openrouter/faq.md
+        outputPath: raw/openrouter/faq.md
         timeoutSeconds: 20
       - name: api-rate-limits
         url: https://openrouter.ai/docs/api/reference/limits
@@ -311,7 +311,7 @@ vendors:
         priority: 3
         tags: [api, limits]
         fetchMode: markdown
-        outputPath: data/openrouter/api-rate-limits.md
+        outputPath: raw/openrouter/api-rate-limits.md
         timeoutSeconds: 20
       - name: api-errors
         url: https://openrouter.ai/docs/api/reference/errors-and-debugging
@@ -319,5 +319,5 @@ vendors:
         priority: 3
         tags: [api, errors]
         fetchMode: markdown
-        outputPath: data/openrouter/api-errors.md
+        outputPath: raw/openrouter/api-errors.md
         timeoutSeconds: 20

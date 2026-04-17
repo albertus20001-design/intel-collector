@@ -4,10 +4,11 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "mintlify dev",
-    "build": "mintlify build",
-    "check": "mintlify build",
+    "build": "mintlify validate",
+    "check": "mintlify validate",
     "update:pricing": "node scripts/update-pricing.mjs",
-    "generate:docs": "node scripts/generate-vendor-pages.mjs && node scripts/generate-index.mjs && node scripts/generate-readme.mjs",
+    "generate:wiki": "node scripts/generate-vendor-pages.mjs && node scripts/generate-index.mjs && node scripts/generate-readme.mjs",
+    "generate:docs": "npm run generate:wiki",
     "validate:sources": "node scripts/validate-sources.mjs"
   },
   "devDependencies": {

@@ -22,15 +22,15 @@ function parseSourcesYaml(yml) {
 }
 
 const vendors = parseSourcesYaml(readFileSync('sources/index.yml', 'utf8'));
-let md = `# Llm Collector\n\nGenerated from \`sources/index.yml\`.\n\n`;
+let md = `# Llm Collector Wiki\n\nGenerated from \`sources/index.yml\`.\n\nThis index points to the raw source snapshots stored under \`raw/\`.\n\n`;
 for (const [vendor, info] of Object.entries(vendors)) {
   md += `## ${vendor} (${info.group || 'ungrouped'})\n\n`;
   for (const src of info.sources) {
-    const file = src.outputPath || 'data/' + vendor + '/' + src.name + '.md';
+    const file = src.outputPath || 'raw/' + vendor + '/' + src.name + '.md';
     md += `- [${src.name}](${base}${file})\n`;
   }
   md += '\n';
 }
-mkdirSync(dirname('docs/index.md'), { recursive: true });
-writeFileSync('docs/index.md', md);
-console.log('updated docs/index.md');
+mkdirSync(dirname('wiki/index.md'), { recursive: true });
+writeFileSync('wiki/index.md', md);
+console.log('updated wiki/index.md');

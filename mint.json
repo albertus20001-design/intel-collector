@@ -17,12 +17,8 @@
       "pages": ["index", "change-log", "daily-summary", "today-diff"]
     },
     {
-      "group": "Collection",
-      "pages": ["collection/sources", "collection/schedule", "collection/output"]
-    },
-    {
-      "group": "Operations",
-      "pages": ["ops/runbook", "ops/changelog"]
+      "group": "Guide",
+      "pages": ["guide/sources", "guide/schedule", "guide/output", "guide/runbook", "guide/changelog"]
     },
     {
       "group": "Vendors",

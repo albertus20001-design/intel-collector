@@ -38,7 +38,7 @@ for (const raw of lines) {
   m = line.match(/^\s{6}-\s+name:\s*(\S+)\s*$/);
   if (m && inSources) {
     sources++;
-    currentSource = { vendor: currentVendor, outputPath: `data/${currentVendor}/${m[1]}.md` };
+    currentSource = { vendor: currentVendor, outputPath: `raw/${currentVendor}/${m[1]}.md` };
     outputPaths.push(currentSource.outputPath);
     continue;
   }
@@ -65,11 +65,11 @@ for (const path of outputPaths) {
   }
 }
 
-for (const vendor of readdirSync('data', { withFileTypes: true })) {
+for (const vendor of readdirSync('raw', { withFileTypes: true })) {
   if (!vendor.isDirectory()) continue;
-  for (const entry of readdirSync(`data/${vendor.name}`, { withFileTypes: true })) {
+  for (const entry of readdirSync(`raw/${vendor.name}`, { withFileTypes: true })) {
     if (!entry.isFile() || !entry.name.endsWith('.md')) continue;
-    const path = `data/${vendor.name}/${entry.name}`;
+    const path = `raw/${vendor.name}/${entry.name}`;
     if (!seen.has(path)) problems.push(`orphan snapshot file: ${path}`);
   }
 }

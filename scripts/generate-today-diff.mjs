@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs';
 
 function changedFiles() {
   try {
-    const out = execFileSync('git', ['diff', '--name-only', '--', 'data'], { encoding: 'utf8' });
+    const out = execFileSync('git', ['diff', '--name-only', '--', 'raw'], { encoding: 'utf8' });
     return out.split(/\r?\n/).filter(Boolean);
   } catch {
     return [];
@@ -41,11 +41,11 @@ function label(name) {
 const files = changedFiles();
 const vendors = new Map();
 for (const file of files) {
-  const m = file.match(/^data\/([^/]+)\//);
+  const m = file.match(/^raw\/([^/]+)\//);
   if (!m) continue;
   const vendor = m[1];
   if (!vendors.has(vendor)) vendors.set(vendor, []);
-  vendors.get(vendor).push(file.replace(`data/${vendor}/`, ''));
+  vendors.get(vendor).push(file.replace(`raw/${vendor}/`, ''));
 }
 
 let md = '# Today Diff\n\n';

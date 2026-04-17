@@ -21,7 +21,7 @@ for (const raw of lines) {
   m = line.match(/^\s{4}sources:\s*$/); if (m) { inSources = true; continue; }
   m = line.match(/^\s{6}-\s+name:\s*(\S+)\s*$/);
   if (m && inSources && vendor) {
-    current = { name: m[1], outputPath: `data/${vendor}/${m[1]}.md` };
+    current = { name: m[1], outputPath: `raw/${vendor}/${m[1]}.md` };
     vendors[vendor].push(current);
     continue;
   }
@@ -31,8 +31,8 @@ for (const raw of lines) {
 
 for (const [v, sources] of Object.entries(vendors)) {
   const links = sources.map(({ name, outputPath }) => `- [${name}](${base}${outputPath})`).join('\n');
-  const md = `# ${v}\n\nSource snapshots for ${v}.\n\n${links}\n`;
-  for (const file of [`vendors/${v}.mdx`, `docs/vendors/${v}.md`]) {
+  const md = `# ${v}\n\nRaw snapshots for ${v}, organized for quick browsing.\n\n${links}\n`;
+  for (const file of [`vendors/${v}.mdx`, `wiki/vendors/${v}.md`]) {
     mkdirSync(dirname(file), { recursive: true });
     writeFileSync(file, md);
     console.log(`updated ${file}`);
