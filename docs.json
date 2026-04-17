@@ -39,7 +39,12 @@
           "wiki/topics/billing/framework",
           "wiki/topics/billing/cache-pricing",
           "wiki/topics/billing/server-tool-pricing",
-          "wiki/topics/billing/vendor-differences"
+          "wiki/topics/billing/vendor-differences",
+          "wiki/topics/models/index",
+          "wiki/topics/models/selection-framework",
+          "wiki/topics/models/long-context",
+          "wiki/topics/models/multimodal",
+          "wiki/topics/models/vendor-differences"
         ]
       },
       {
