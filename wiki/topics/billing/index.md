@@ -29,16 +29,16 @@
 
 ## 主要参考来源
 
-- `raw/anthropic/pricing.md`
-- `raw/anthropic/api-rate-limits.md`
-- `raw/openai/pricing.md`
-- `raw/openai/api-rate-limits.md`
-- `raw/google/pricing.md`
-- `raw/google/api-rate-limits.md`
-- `raw/deepseek/pricing.md`
-- `raw/deepseek/api-rate-limits.md`
-- `raw/openrouter/api-rate-limits.md`
-- `raw/openrouter/faq.md`
+- [raw/anthropic/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
+- [raw/anthropic/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-rate-limits.md)
+- [raw/openai/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
+- [raw/openai/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-rate-limits.md)
+- [raw/google/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
+- [raw/google/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-rate-limits.md)
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
+- [raw/deepseek/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-rate-limits.md)
+- [raw/openrouter/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-rate-limits.md)
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
 
 ## 使用原则
 

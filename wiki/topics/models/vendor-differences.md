@@ -19,8 +19,8 @@
 - 缓存 与长提示如何搭配
 
 参考：
-- `raw/anthropic/api-models.md`
-- `raw/anthropic/api-models-api.md`
+- [raw/anthropic/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models.md)
+- [raw/anthropic/api-models-api.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models-api.md)
 
 ### OpenAI
 
@@ -29,8 +29,8 @@
 - 哪些工作流更适合平台化接入
 
 参考：
-- `raw/openai/api-models.md`
-- `raw/openai/api-responses.md`
+- [raw/openai/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-models.md)
+- [raw/openai/api-responses.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)
 
 ### Google Gemini
 
@@ -39,9 +39,9 @@
 - 大窗口场景下的能力边界
 
 参考：
-- `raw/google/api-models.md`
-- `raw/google/api-structured-output.md`
-- `raw/google/api-function-calling.md`
+- [raw/google/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-models.md)
+- [raw/google/api-structured-output.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-structured-output.md)
+- [raw/google/api-function-calling.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-function-calling.md)
 
 ### DeepSeek
 
@@ -50,8 +50,8 @@
 - 在不追求最强基准测试时的性价比比较
 
 参考：
-- `raw/deepseek/api-models.md`
-- `raw/deepseek/pricing.md`
+- [raw/deepseek/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-models.md)
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
 
 ### OpenRouter
 
@@ -60,9 +60,9 @@
 - 平台可接入性与真实能力之间的落差
 
 参考：
-- `raw/openrouter/api-models.md`
-- `raw/openrouter/routing-供应商-selection.md`
-- `raw/openrouter/faq.md`
+- [raw/openrouter/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
+- [raw/openrouter/routing-provider-selection.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/routing-provider-selection.md)
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
 
 ## 回答模板
 

@@ -27,40 +27,40 @@
 OpenAI 在工具、Responses API 和代理式能力上资料较多，适合用来观察“模型 token + 工具能力”叠加成本。
 
 主要看：
-- `raw/openai/api-responses.md`
-- `raw/openai/pricing.md`
+- [raw/openai/api-responses.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)
+- [raw/openai/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
 
 ### Google Gemini
 
 Google 适合结合函数调用、结构化输出与模型能力一起看，但工具成本描述可能分散在功能文档和价格文档里。
 
 主要看：
-- `raw/google/api-function-calling.md`
-- `raw/google/pricing.md`
+- [raw/google/api-function-calling.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-function-calling.md)
+- [raw/google/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
 
 ### Anthropic
 
 Anthropic 更适合作为工具调用范式和消息结构参考，价格判断仍主要回到价格文档本身。
 
 主要看：
-- `raw/anthropic/api-messages.md`
-- `raw/anthropic/pricing.md`
+- [raw/anthropic/api-messages.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-messages.md)
+- [raw/anthropic/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
 
 ### OpenRouter
 
 OpenRouter 是理解服务端工具 / 平台工具抽象的重点对象。实际判断时，要把“平台层工具能力”与“底层供应商成本”分开看。
 
 主要看：
-- `raw/openrouter/api-parameters.md`
-- `raw/openrouter/faq.md`
+- [raw/openrouter/api-parameters.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-parameters.md)
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
 
 ### DeepSeek
 
 DeepSeek 目前更适合作为函数调用和 JSON 输出能力补充样本，而不是服务端工具计费主样本。
 
 主要看：
-- `raw/deepseek/api-function-calling.md`
-- `raw/deepseek/pricing.md`
+- [raw/deepseek/api-function-calling.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-function-calling.md)
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
 
 ## 实务判断
 

@@ -19,8 +19,8 @@
 - 速率限制和层级如何影响使用
 
 参考：
-- `raw/anthropic/pricing.md`
-- `raw/anthropic/api-rate-limits.md`
+- [raw/anthropic/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
+- [raw/anthropic/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-rate-limits.md)
 
 ### OpenAI
 
@@ -29,9 +29,9 @@
 - Responses / 工具调用与成本如何叠加
 
 参考：
-- `raw/openai/pricing.md`
-- `raw/openai/api-rate-limits.md`
-- `raw/openai/api-responses.md`
+- [raw/openai/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
+- [raw/openai/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-rate-limits.md)
+- [raw/openai/api-responses.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)
 
 ### Google Gemini
 
@@ -40,8 +40,8 @@
 - 免费层与付费层如何区分
 
 参考：
-- `raw/google/pricing.md`
-- `raw/google/api-rate-limits.md`
+- [raw/google/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
+- [raw/google/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-rate-limits.md)
 
 ### DeepSeek
 
@@ -50,8 +50,8 @@
 - 在成本敏感场景下是否值得优先比较
 
 参考：
-- `raw/deepseek/pricing.md`
-- `raw/deepseek/api-rate-limits.md`
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
+- [raw/deepseek/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-rate-limits.md)
 
 ### OpenRouter
 
@@ -60,9 +60,9 @@
 - 聚合平台下，为什么“官方单价便宜”不一定等于“最终更省”
 
 参考：
-- `raw/openrouter/faq.md`
-- `raw/openrouter/api-rate-limits.md`
-- `raw/openrouter/api-models.md`
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
+- [raw/openrouter/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-rate-limits.md)
+- [raw/openrouter/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
 
 ## 回答模板
 

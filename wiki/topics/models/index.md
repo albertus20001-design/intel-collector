@@ -27,16 +27,16 @@
 
 ## 主要参考来源
 
-- `raw/anthropic/api-models.md`
-- `raw/anthropic/api-models-api.md`
-- `raw/openai/api-models.md`
-- `raw/google/api-models.md`
-- `raw/deepseek/api-models.md`
-- `raw/openrouter/api-models.md`
-- `raw/google/api-structured-output.md`
-- `raw/google/api-function-calling.md`
-- `raw/deepseek/api-function-calling.md`
-- `raw/openrouter/feature-structured-outputs.md`
+- [raw/anthropic/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models.md)
+- [raw/anthropic/api-models-api.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models-api.md)
+- [raw/openai/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-models.md)
+- [raw/google/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-models.md)
+- [raw/deepseek/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-models.md)
+- [raw/openrouter/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
+- [raw/google/api-structured-output.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-structured-output.md)
+- [raw/google/api-function-calling.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-function-calling.md)
+- [raw/deepseek/api-function-calling.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-function-calling.md)
+- [raw/openrouter/feature-structured-outputs.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/feature-structured-outputs.md)
 
 ## 使用原则
 

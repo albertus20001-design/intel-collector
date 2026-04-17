@@ -19,12 +19,12 @@
 
 ### 1. 模型
 优先参考：
-- `raw/anthropic/api-models.md`
-- `raw/anthropic/api-models-api.md`
-- `raw/openai/api-models.md`
-- `raw/google/api-models.md`
-- `raw/deepseek/api-models.md`
-- `raw/openrouter/api-models.md`
+- [raw/anthropic/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models.md)
+- [raw/anthropic/api-models-api.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models-api.md)
+- [raw/openai/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-models.md)
+- [raw/google/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-models.md)
+- [raw/deepseek/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-models.md)
+- [raw/openrouter/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
 
 适用问题：
 - 可用模型家族 / 变体
@@ -33,16 +33,16 @@
 
 ### 2. 核心 API
 优先参考：
-- `raw/anthropic/api-overview.md`
-- `raw/anthropic/api-messages.md`
-- `raw/openai/api-responses.md`
-- `raw/google/api-overview.md`
-- `raw/deepseek/api-introduction.md`
-- `raw/deepseek/api-chat.md`
-- `raw/openrouter/api-introduction.md`
-- `raw/openrouter/api-responses.md`
-- `raw/openrouter/api-authentication.md`
-- `raw/openrouter/api-parameters.md`
+- [raw/anthropic/api-overview.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-overview.md)
+- [raw/anthropic/api-messages.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-messages.md)
+- [raw/openai/api-responses.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)
+- [raw/google/api-overview.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-overview.md)
+- [raw/deepseek/api-introduction.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-introduction.md)
+- [raw/deepseek/api-chat.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-chat.md)
+- [raw/openrouter/api-introduction.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-introduction.md)
+- [raw/openrouter/api-responses.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-responses.md)
+- [raw/openrouter/api-authentication.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-authentication.md)
+- [raw/openrouter/api-parameters.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-parameters.md)
 
 适用问题：
 - 鉴权头 / Base URL
@@ -52,15 +52,15 @@
 
 ### 3. 价格与限制
 优先参考：
-- `raw/anthropic/pricing.md`
-- `raw/anthropic/api-rate-limits.md`
-- `raw/openai/pricing.md`
-- `raw/openai/api-rate-limits.md`
-- `raw/google/pricing.md`
-- `raw/google/api-rate-limits.md`
-- `raw/deepseek/pricing.md`
-- `raw/deepseek/api-rate-limits.md`
-- `raw/openrouter/api-rate-limits.md`
+- [raw/anthropic/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
+- [raw/anthropic/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-rate-limits.md)
+- [raw/openai/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
+- [raw/openai/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-rate-limits.md)
+- [raw/google/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
+- [raw/google/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-rate-limits.md)
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
+- [raw/deepseek/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-rate-limits.md)
+- [raw/openrouter/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-rate-limits.md)
 - `wiki/PRICING_TOPIC_GUIDE.md`
 
 适用问题：
@@ -71,12 +71,12 @@
 
 ### 4. 错误与可靠性
 优先参考：
-- `raw/anthropic/api-error-codes.md`
-- `raw/openai/api-errors.md`
-- `raw/google/api-errors.md`
-- `raw/deepseek/api-errors.md`
-- `raw/openrouter/api-errors.md`
-- `raw/openrouter/faq.md`
+- [raw/anthropic/api-error-codes.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-error-codes.md)
+- [raw/openai/api-errors.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-errors.md)
+- [raw/google/api-errors.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-errors.md)
+- [raw/deepseek/api-errors.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-errors.md)
+- [raw/openrouter/api-errors.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-errors.md)
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
 
 适用问题：
 - 重试策略
@@ -85,11 +85,11 @@
 
 ### 5. 结构化输出与工具调用
 优先参考：
-- `raw/google/api-structured-output.md`
-- `raw/google/api-function-calling.md`
-- `raw/deepseek/api-function-calling.md`
-- `raw/deepseek/api-json-output.md`
-- `raw/openrouter/feature-structured-outputs.md`
+- [raw/google/api-structured-output.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-structured-output.md)
+- [raw/google/api-function-calling.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-function-calling.md)
+- [raw/deepseek/api-function-calling.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-function-calling.md)
+- [raw/deepseek/api-json-output.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-json-output.md)
+- [raw/openrouter/feature-structured-outputs.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/feature-structured-outputs.md)
 
 适用问题：
 - JSON Schema 输出
@@ -98,9 +98,9 @@
 
 ### 6. 路由 / 聚合平台
 优先参考：
-- `raw/openrouter/routing-供应方-selection.md`
-- `raw/openrouter/faq.md`
-- `raw/openrouter/api-models.md`
+- [raw/openrouter/routing-供应方-selection.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/routing-供应方-selection.md)
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
+- [raw/openrouter/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
 
 适用问题：
 - 供应商选择

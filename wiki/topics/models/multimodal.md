@@ -26,40 +26,40 @@
 OpenAI 是多模态工作流的重要参考对象，适合结合 Responses API 和文件 / 图像输入一起看。
 
 主要看：
-- `raw/openai/api-responses.md`
-- `raw/openai/pricing.md`
+- [raw/openai/api-responses.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)
+- [raw/openai/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
 
 ### Google Gemini
 
 Google 多模态叙事也很强，适合和长上下文一起观察整体能力边界。
 
 主要看：
-- `raw/google/api-overview.md`
-- `raw/google/pricing.md`
+- [raw/google/api-overview.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-overview.md)
+- [raw/google/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
 
 ### Anthropic
 
 Anthropic 更适合作为消息结构与能力边界补充样本，而不是单独的多模态成本主样本。
 
 主要看：
-- `raw/anthropic/api-messages.md`
-- `raw/anthropic/pricing.md`
+- [raw/anthropic/api-messages.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-messages.md)
+- [raw/anthropic/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
 
 ### DeepSeek
 
 DeepSeek 当前更适合作为基础 API 与价格竞争力参考，多模态叙事通常不是第一优先项。
 
 主要看：
-- `raw/deepseek/api-introduction.md`
-- `raw/deepseek/pricing.md`
+- [raw/deepseek/api-introduction.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-introduction.md)
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
 
 ### OpenRouter
 
 OpenRouter 的关键是多模态能力是否在不同 供应商下保持一致，以及平台抽象是否带来额外限制。
 
 主要看：
-- `raw/openrouter/api-models.md`
-- `raw/openrouter/faq.md`
+- [raw/openrouter/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
 
 ## 实务判断
 

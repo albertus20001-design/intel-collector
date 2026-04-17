@@ -31,28 +31,28 @@
 Anthropic 的价格体系里，对缓存写入 / 缓存读取的表述通常相对明确，是理解缓存计费最适合的参考样本之一。
 
 主要看：
-- `raw/anthropic/pricing.md`
+- [raw/anthropic/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
 
 ### OpenAI
 
 OpenAI 价格页里会涉及“缓存输入（cached input）”一类表述，适合拿来和 Anthropic 对照，看缓存折扣是如何落在输入侧的。
 
 主要看：
-- `raw/openai/pricing.md`
+- [raw/openai/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
 
 ### Google Gemini
 
 Google 更需要结合具体模型和价格页来判断，有时重点不只是缓存，而是长上下文和多模态成本一起看。
 
 主要看：
-- `raw/google/pricing.md`
+- [raw/google/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
 
 ### DeepSeek
 
 DeepSeek 的资料更适合用于补充是否存在折扣、输入输出结构和限流约束，缓存规则通常不像 Anthropic 那样成为主叙事中心。
 
 主要看：
-- `raw/deepseek/pricing.md`
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
 
 ### OpenRouter
 
@@ -63,8 +63,8 @@ OpenRouter 更像是在原厂之上再加一层可用性 / 路由语境。比较
 - 平台是否对缓存能力有额外抽象或限制
 
 主要看：
-- `raw/openrouter/faq.md`
-- `raw/openrouter/api-rate-limits.md`
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
+- [raw/openrouter/api-rate-limits.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-rate-limits.md)
 
 ## 实务判断
 

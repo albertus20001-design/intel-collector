@@ -27,41 +27,41 @@
 Google 在长上下文叙事上通常更突出，适合做“大上下文能力”参考样本。
 
 主要看：
-- `raw/google/api-models.md`
-- `raw/google/pricing.md`
+- [raw/google/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/api-models.md)
+- [raw/google/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/google/pricing.md)
 
 ### Anthropic
 
 Anthropic 更适合结合 缓存 和长提示一起看，重点不是最大窗口数字本身，而是长上下文下的实际可用性。
 
 主要看：
-- `raw/anthropic/api-models.md`
-- `raw/anthropic/pricing.md`
+- [raw/anthropic/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/api-models.md)
+- [raw/anthropic/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/anthropic/pricing.md)
 
 ### OpenAI
 
 OpenAI 更适合结合 Responses API、工具和实际工作流一起看，不只是孤立比较上下文长度。
 
 主要看：
-- `raw/openai/api-models.md`
-- `raw/openai/api-responses.md`
-- `raw/openai/pricing.md`
+- [raw/openai/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-models.md)
+- [raw/openai/api-responses.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/api-responses.md)
+- [raw/openai/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openai/pricing.md)
 
 ### DeepSeek
 
 DeepSeek 适合补充成本敏感场景下的比较，但更需要结合价格与稳定性一起判断。
 
 主要看：
-- `raw/deepseek/api-models.md`
-- `raw/deepseek/pricing.md`
+- [raw/deepseek/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/api-models.md)
+- [raw/deepseek/pricing.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/deepseek/pricing.md)
 
 ### OpenRouter
 
 OpenRouter 的重点是：即使同一模型可用，最终体验仍可能受 供应商路由和平台抽象影响。
 
 主要看：
-- `raw/openrouter/api-models.md`
-- `raw/openrouter/faq.md`
+- [raw/openrouter/api-models.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/api-models.md)
+- [raw/openrouter/faq.md](https://github.com/albertus20001-design/llm-collector/blob/main/raw/openrouter/faq.md)
 
 ## 实务判断
 
