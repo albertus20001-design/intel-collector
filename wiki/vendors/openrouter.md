@@ -1,3 +1,7 @@
+---
+title: OpenRouter
+---
+
 # OpenRouter
 
 OpenRouter 的原始资料快照，按快速浏览场景整理。

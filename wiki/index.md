@@ -1,3 +1,7 @@
+---
+title: 索引
+---
+
 # LLM Collector 知识库
 
 由 `sources/index.yml` 自动生成。
